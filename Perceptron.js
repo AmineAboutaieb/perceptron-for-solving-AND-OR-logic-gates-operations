@@ -1,4 +1,4 @@
-let sigmoid = (num) => {
+let activation = (num) => {
   return num >= 1 ? 1 : 0;
 };
 
@@ -14,7 +14,7 @@ class Perceptron {
 
   guess(i1, i2) {
     let sum = i1 * this.w1 + i2 * this.w2;
-    return sigmoid(sum);
+    return activation(sum);
   }
 
   train(i1, i2, target) {
